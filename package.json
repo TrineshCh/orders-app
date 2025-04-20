@@ -7,9 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "run": "concurrently \"npm start --prefix client\" \"npm start --prefix server\"",
     "start": "echo \"Use 'npm run run' to start both client and server\"",
-    "install-all": "npm run install-client && npm run install-server",
+    "install-all": "npm run install-client && npm run install-server && npm run install-outside",
     "install-client": "npm install --prefix client",
-    "install-server": "npm install --prefix server"
+    "install-server": "npm install --prefix server",
+    "install-outside" : "npm install"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,8 @@
   "homepage": "https://github.com/TrineshCh/orders-app#readme",
   "engines": {
     "node": "22.x"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2"
   }
 }
