@@ -4,14 +4,14 @@ const { Pool } = require("pg")
 require("dotenv").config()
 
 const app = express()
-const port = process.env.PORT || 5000
+const port = 3000
 
 app.use(cors())
 app.use(express.json())
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: process.env.NODE_ENV === "production" ? { rejectUnauthorized: false } : false,
+  connectionString: "postgresql://neondb_owner:npg_Q5j0pLnhOild@ep-super-resonance-a4a3zauu-pooler.us-east-1.aws.neon.tech/neondb?sslmode=require",
+  ssl: "development" === "production" ? { rejectUnauthorized: false } : false,
 })
 
 pool.connect((err, client, release) => {
