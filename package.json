@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "installe" : "npm install --prefix server && npm install",
+    "installe": "concurrently \"npm install --prefix server\" \"npm install\"",
     "runs" : "concurrently \"npm start\" \"npm start --prefix server\""
   },
   "eslintConfig": {
