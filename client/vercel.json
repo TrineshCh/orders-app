@@ -1,25 +1,17 @@
 {
-  "routes" : [
-    {
-      "src": "/",
-      "dest" : "/"
-    }, {
-      "src" : "/test",
-      "dest" : "/"
-    }
-  ],
   "builds": [
     {
       "src": "client/package.json",
-      "use": "@vercel/static"
+      "use": "@vercel/static-build"
     }
   ],
-  "env": {
-    "NODE_ENV": "production"
-  },
-  "outputDirectory": "client/build",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
   "buildCommand": "npm run build --prefix client",
-  "installCommand": "npm install --prefix client"
-
-
+  "installCommand": "npm install --prefix client",
+  "outputDirectory": "client/build"
 }
