@@ -1,4 +1,13 @@
 {
+  "routes" : [
+    {
+      "src": "/",
+      "dest" : "/"
+    }, {
+      "src" : "/test",
+      "dest" : "/"
+    }
+  ],
   "builds": [
     {
       "src": "client/package.json",
