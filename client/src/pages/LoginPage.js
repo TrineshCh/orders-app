@@ -14,7 +14,6 @@ export default function LoginPage() {
   const navigate = useNavigate()
   const location = useLocation()
 
-  // Get the redirect path from location state or default to home
   const from = location.state?.from?.pathname || "/"
 
   async function handleSubmit(e) {
